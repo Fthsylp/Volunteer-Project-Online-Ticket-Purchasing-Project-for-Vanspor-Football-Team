@@ -1,0 +1,56 @@
+﻿@model CourseProject.Models.Entity.RegisterViewModel
+
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_DefaultLayout.cshtml";
+}
+<br>
+<br>
+<br>
+<br>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card bg-black text-light p-4" style="height: 700px;">
+                <div class="card-body d-flex flex-column justify-content-center">
+                    <h3 class="text-center mb-4" style="color: red;">Kayıt Ol</h3>
+                    <form class="login-form" method="post">
+                        <div class="mb-3">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-user fa-lg" style="color: red;"></i></span>
+                                <input type="text" id="username" class="form-control bg-black text-light" asp-for="Username" placeholder="Kullanıcı Adı" required />
+                            </div>
+                            <span class="text-danger" asp-validation-for="Username"></span>
+                        </div>
+                        <div class="mb-3">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-envelope fa-lg" style="color: red;"></i></span>
+                                <input type="email" id="email" class="form-control bg-dark text-light" asp-for="Email" placeholder="Email" required />
+                            </div>
+                            <span class="text-danger" asp-validation-for="Email"></span>
+                        </div>
+                        <div class="mb-3">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-lock fa-lg" style="color: red;"></i></span>
+                                <input type="password" id="password" class="form-control bg-black text-light" asp-for="Password" placeholder="Şifre" required minlength="6" />
+                            </div>
+                            <span class="text-danger" asp-validation-for="Password"></span>
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-danger btn-lg btn-block" style="border-radius: 20px;">Kayıt Ol</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 d-none d-md-block">
+            <img src="assets/images/vanspor-fk-icin-yak-03-01-2023-13-25.png" alt="Login image" class="img-fluid">
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+<br>

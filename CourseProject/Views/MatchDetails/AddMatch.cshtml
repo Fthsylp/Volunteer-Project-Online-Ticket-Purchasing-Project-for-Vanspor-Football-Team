@@ -1,0 +1,52 @@
+﻿@model CourseProject.Models.Entity.MatchDetail
+
+@{
+    ViewBag.Title = "AddMatch";
+    Layout = "~/Views/Shared/_AdminPageLayout.cshtml";
+}
+
+<div class="container text-center">
+    <h1>Yeni Maç Ekleme Sayfası</h1>
+</div>
+
+<div class="container py-5">
+    <form method="post" enctype="multipart/form-data">
+
+        <div class="mb-3">
+            <label class="form-label">Maç Adı</label>
+            <input type="text" class="form-control" asp-for="MatchName" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Maç Detayları</label>
+            <input type="text" class="form-control" asp-for="MatchDescription" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Maç türü (Lig/Kupa)</label>
+            <input type="text" class="form-control" asp-for="MatchType" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Maç Günü</label>
+            <input type="date" class="form-control" asp-for="MatchDate" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Maç Saati</label>
+            <input type="time" class="form-control" asp-for="MatchTime" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Bilet Fiyatı</label>
+            <input type="text" class="form-control" asp-for="TicketPrice" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Maç Resim</label>
+            <input type="file" class="form-control" asp-for="MatchImage" />
+        </div>
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-dark">
+                Kaydet
+            </button>
+        </div>
+
+    </form>
+</div>

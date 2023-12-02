@@ -1,0 +1,70 @@
+﻿@using CourseProject.Models.Entity
+@model List<MatchDetail>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminPageLayout.cshtml";
+    int number = 1;
+}
+
+<br />
+<h2 class="text-center">Maç Detayları Admin Kontrol Sayfası</h2>
+<br />
+
+@if (Model.Count == 0)
+{
+    <p>No experiences to display.</p>
+}
+else
+{
+    <div class="col-lg-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Striped Table</h4>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Maç Adı</th>
+                                <th>Maç Açıklaması</th>
+                                <th>Maç Türü</th>
+                                <th>Maç Tarihi</th>
+                                <th>Maç Saati</th>
+                                <th>Bilet Fiyatı(₺)</th>
+                                <th>Maç görseli</th>
+                                <th>Düzenle</th>
+                                <th>Sil</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>@number</td>
+                                    <td>@item.MatchName</td>
+                                    <td>@item.MatchDescription</td>
+                                    <td>@item.MatchType</td>
+                                    <td>@item.MatchDate.ToString("dd MMM yyyy")</td>
+                                    <td>@item.MatchTime.ToString("HH:mm")</td>
+                                    <td>@item.TicketPrice</td>
+                                    <td>
+                                        <img src="@item.MatchImage" alt="Match Image" class="img-thumbnail" />
+                                    </td>
+                                    <td><a href="/MatchDetails/EditMatch/@item.Id" class="btn btn-info btn-sm"><i class="fas fa-pencil-alt"></i> Düzenle</a></td>
+                                    <td><a href="/MatchDetails/DeleteMatch/@item.Id" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Sil</a></td>
+                                </tr>
+                                number++;
+                            }
+                        </tbody>
+                    </table>
+                    <a href="/MatchDetails/AddMatch/" class="btn btn-light mt-3">Yeni Maç</a>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+
+

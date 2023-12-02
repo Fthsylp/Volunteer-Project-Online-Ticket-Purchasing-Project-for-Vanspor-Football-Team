@@ -1,0 +1,51 @@
+﻿@model CourseProject.Models.Entity.ContactDetail
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminPageLayout.cshtml";
+}
+
+<div class="container text-center">
+    <h1> İletişim Düzenleme Sayfası</h1>
+</div>
+
+<div class="container py-5">
+    <form method="post" asp-action="Index" asp-controller="ContactDetails">
+
+        <input type="hidden" asp-for="Id" />
+
+        <div class="mb-3">
+            <label class="form-label">Birinci Başlık</label>
+            <input type="text" class="form-control" asp-for="Title" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">İkinci Başlık</label>
+            <input type="text" class="form-control" asp-for="SecondTitle" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Açıklama</label>
+            <input type="text" class="form-control" asp-for="Description" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Buton Adı</label>
+            <input type="text" class="form-control" asp-for="ButtonName" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Telefon Numarası</label>
+            <input type="number" class="form-control" asp-for="PhoneNumber" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">E-mail Adresi</label>
+            <input type="email" class="form-control" asp-for="EmailAdress" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Açık Adres</label>
+            <input type="text" class="form-control" asp-for="Adress" />
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-dark">
+                Kaydet
+            </button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,42 @@
+﻿@model List<CourseProject.Models.Entity.MatchDetail>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="items">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="item">
+                        @foreach (var item in Model)
+                        {
+                            <div class="main-button">
+                                <a asp-action="ShowTicket" asp-route-id="@item.Id">Buy a Ticket!</a>
+                            </div>
+                            <div class="row mb-4">
+                                <div class="col-lg-4 col-sm-5">
+                                    <div class="image">
+                                        <img src="@item.MatchImage" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-8 col-sm-7">
+                                    <div class="right-content">
+                                        <h4>@item.MatchName</h4>
+                                        <span>@item.MatchType</span>
+                                        @*                                         <div class="main-button">
+                                    <a href="/DefaultPage/BuyTicket/@item.Id">Buy a Ticket!</a>
+                                    </div> *@
+                                        <p>@item.MatchDescription</p>
+                                        <ul class="info">
+                                            <li><i class="fa fa-user"></i> @item.MatchDate</li>
+                                            <li><i class="fa fa-globe"></i> @item.MatchType</li>
+                                            <li><i class="fa fa-home"></i> @item.TicketPrice</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

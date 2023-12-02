@@ -1,0 +1,33 @@
+﻿@model CourseProject.Models.Entity.SoccerDetail
+
+@{
+    ViewData["Title"] = "EditSoccer";
+    Layout = "~/Views/Shared/_AdminPageLayout.cshtml";
+}
+
+
+<div class="container text-center">
+    <h1>Yeni Düzenleme Ekleme Sayfası</h1>
+</div>
+
+<div class="container py-5">
+    <form method="post" enctype="multipart/form-data">
+
+        <div class="mb-3">
+            <label class="form-label">Maç Adı</label>
+            <input type="text" class="form-control" asp-for="Name" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Maç Resim</label>
+            <input type="file" class="form-control" asp-for="Image" />
+        </div>
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-dark">
+                Kaydet
+            </button>
+        </div>
+
+    </form>
+</div>
