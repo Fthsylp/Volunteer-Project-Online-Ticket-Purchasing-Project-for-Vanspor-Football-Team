@@ -28,6 +28,8 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\matchImage\" />
+    <Folder Include="wwwroot\aboutEntryImage\" />
+    <Folder Include="wwwroot\aboutSliderImage\" />
     <Folder Include="wwwroot\soccerImage\" />
     <Folder Include="wwwroot\sliderImage\" />
   </ItemGroup>

@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_DefaultLayout.cshtml";
+}
+
+@await Component.InvokeAsync("AboutEntryComponent")
+
+
+
+<div class="weekly-offers">
+    @await Component.InvokeAsync("AboutTagComponent")
+    @await Component.InvokeAsync("AboutSliderComponent")
+
+        
+</div>

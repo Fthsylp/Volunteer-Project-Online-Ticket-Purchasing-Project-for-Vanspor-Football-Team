@@ -1,5 +1,5 @@
 ﻿using CourseProject.Models.Entity;
-using CourseProject.Repositories;
+using CourseProject.Repositories.IRepository;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 

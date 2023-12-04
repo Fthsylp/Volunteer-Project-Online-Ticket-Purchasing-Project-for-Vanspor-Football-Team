@@ -1,0 +1,32 @@
+﻿@model List<CourseProject.Models.Entity.AboutSlider>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="owl-weekly-offers owl-carousel">
+                <div class="item">
+                    <div class="thumb">
+                        @foreach (var item in Model)
+                        {
+                            <img src="@item.Image" alt="">
+                        }
+                        <div class="text">
+                            @foreach (var item in Model)
+                            {
+                                <h4>@item.Title</h4>
+                                <h6>@item.Date</h6>
+                                <ul>
+                                    <li>@item.SecondTitle</li>
+                                    <li><i class="fa fa-taxi"></i> @item.Paragraph1</li>
+                                    <li><i class="fa fa-plane"></i> @item.Paragraph2</li>
+                                    <li><i class="fa fa-building"></i> @item.Paragraph3</li>
+                                    <li><i class="fa fa-allergies"></i> @item.Paragraph4</li>
+                                </ul>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

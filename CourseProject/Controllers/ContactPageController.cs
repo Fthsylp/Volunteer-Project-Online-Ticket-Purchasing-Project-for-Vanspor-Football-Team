@@ -1,4 +1,4 @@
-﻿using CourseProject.Repositories;
+﻿using CourseProject.Repositories.IRepository;
 using CourseProject.ViewComponents;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

@@ -1,0 +1,64 @@
+﻿@model CourseProject.Models.Entity.AboutSlider
+
+@{
+    ViewData["Title"] = "EditAboutSlider";
+    Layout = "~/Views/Shared/_AdminPageLayout.cshtml";
+}
+
+
+<div class="container text-center">
+    <h1> About Slider Düzenleme Sayfası</h1>
+</div>
+
+<div class="container py-5">
+    <form method="post" enctype="multipart/form-data">
+
+        <div class="mb-3">
+            <label class="form-label">Başlık</label>
+            <input type="text" class="form-control" asp-for="Title" />
+        </div>
+
+
+        <div class="mb-3">
+            <label class="form-label">İkinci Başlık</label>
+            <input type="text" class="form-control" asp-for="SecondTitle" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Date</label>
+            <input type="text" class="form-control" asp-for="Date" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Resim</label>
+            <input type="file" class="form-control" asp-for="Image" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">1.Paragraf</label>
+            <input type="text" class="form-control" asp-for="Paragraph1" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">2.Paragraf</label>
+            <input type="text" class="form-control" asp-for="Paragraph2" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">3.Paragraf</label>
+            <input type="text" class="form-control" asp-for="Paragraph3" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">4.Paragraf</label>
+            <input type="text" class="form-control" asp-for="Paragraph4" />
+        </div>
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-light">
+                Kaydet
+            </button>
+        </div>
+
+    </form>
+</div>

@@ -1,0 +1,32 @@
+﻿@model CourseProject.Models.Entity.AboutTag
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminPageLayout.cshtml";
+}
+
+<div class="container text-center">
+    <h1> About Sayfası Tag Düzenleme Sayfası</h1>
+</div>
+
+<div class="container py-5">
+    <form method="post" asp-action="Index" asp-controller="AboutTag" >
+        <input type="hidden" asp-for="Id" />
+
+        <div class="mb-3">
+            <label class="form-label">Başlık</label>
+            <input type="text" class="form-control" asp-for="Title" />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Açıklama</label>
+            <input type="text" class="form-control" asp-for="Description" />
+        </div>
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-dark">
+                Kaydet
+            </button>
+        </div>
+
+    </form>
+</div>

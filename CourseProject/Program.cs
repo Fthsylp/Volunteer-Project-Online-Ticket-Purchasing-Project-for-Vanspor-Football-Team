@@ -1,5 +1,6 @@
 using CourseProject.Models.Data;
-using CourseProject.Repositories;
+using CourseProject.Repositories.IRepository;
+using CourseProject.Repositories.Repository;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -43,6 +44,9 @@ builder.Services.AddScoped<ITagRepository, TagRepository>();
 builder.Services.AddScoped<IMatchDetailsRepository, MatchDetailsRepository>();
 builder.Services.AddScoped<ISoccerDetailsRepository, SoccerDetailsRepository>();
 builder.Services.AddScoped<IContactDetailsRepository, ContactDetailsRepository>();
+builder.Services.AddScoped<IAboutEntryRepository, AboutEntryRepository>();
+builder.Services.AddScoped<IAboutTagRepository, AboutTagRepository>();
+builder.Services.AddScoped<IAboutSliderRepository, AboutSliderRepository>();
 
 var app = builder.Build();
 

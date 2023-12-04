@@ -14,5 +14,8 @@ namespace CourseProject.Models.Data
         public DbSet<SoccerDetail> SoccerDetails { get; set; }
         public DbSet<BuyTicket> BuyTickets { get; set; }
         public DbSet<ContactDetail> ContactDetails { get; set; }
+        public DbSet<AboutEntry> AboutEntries { get; set; }
+        public DbSet<AboutTag> AboutTags { get; set; }
+        public DbSet<AboutSlider> AboutSliders { get; set; }
     }
 }
